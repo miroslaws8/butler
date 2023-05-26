@@ -1,0 +1,41 @@
+{
+  "name": "Hubforce AI",
+  "description": "Hubforce provides a digital sales room to engage the buyers at every step of their journey.",
+  "version": "0.1.2",
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["/static/js/main.js"],
+      "css": ["/static/css/main.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "ic_16.png",
+    "19": "ic_19.png",
+    "38": "ic_38.png",
+    "48": "ic_48.png",
+    "128": "ic_128.png",
+    "512": "ic_512.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "The Butler AI",
+    "default_icon": {
+      "16": "ic_16.png",
+      "19": "ic_19.png",
+      "38": "ic_38.png",
+      "48": "ic_48.png",
+      "128": "ic_128.png",
+      "512": "ic_512.png"
+    }
+  }
+}
